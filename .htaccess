@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteRule ^$ index.php?pApifw=index							[QSA]
+	RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?pApifw=$1							[QSA]
+	RewriteRule ^([a-zA-Z0-9_-]+)/$ index.php?pApifw=$1							[QSA]
+	RewriteRule ^([a-zA-Z0-9_-]+)/([^/.]+)$ index.php?pApifw=$1&pApifwnext=$2	[QSA]
+</IfModule>
